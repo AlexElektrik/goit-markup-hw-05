@@ -24,7 +24,7 @@
           >
           <ul class="header-list list">
             <li class="header-item">
-              <a class="header-link" href="./index.html">Студия</a>
+              <a class="header-link current" href="./index.html">Студия</a>
             </li>
             <li class="header-item">
               <a class="header-link" href="./portfolio.html">Портфолио</a>
@@ -40,8 +40,8 @@
               <svg class="icon-envelope icon-contackt" width="16" height="10">
                 <use href="./images/SVG/icon.svg#icon-envelope"></use>
               </svg>
-              info@devstudio.com</a
-            >
+              info@devstudio.com
+            </a>
           </li>
           <li class="contackt-item">
             <a class="contackt" href="tel:+380961111111">
@@ -58,7 +58,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="head-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="button-hero" type="button">Заказать услугу</button>
+          <button class="button-hero" type="button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <section class="about section">
@@ -121,25 +123,34 @@
           <h2 class="gallery-title">Чем мы занимаемся</h2>
           <ul class="list gallery-list">
             <li class="gallery-item">
-              <img
-                src="./images/job/job-1.jpg"
-                alt="розработчик работает над сайтом"
-                width="370"
-              />
+              <div class="galery-cotainer-foto">
+                <img
+                  src="./images/job/job-1.jpg"
+                  alt="розработчик работает над сайтом"
+                  width="370"
+                />
+                <p class="gallery-description">Десктопные приложения</p>
+              </div>
             </li>
             <li class="gallery-item">
-              <img
-                src="./images/job/job-2.jpg"
-                alt="работа над дизайном мобильной версии"
-                width="370"
-              />
+              <div class="galery-cotainer-foto">
+                <img
+                  src="./images/job/job-2.jpg"
+                  alt="работа над дизайном мобильной версии"
+                  width="370"
+                />
+                <p class="gallery-description">Мобильные приложения</p>
+              </div>
             </li>
             <li class="gallery-item">
-              <img
-                src="./images/job/job-3.jpg"
-                alt="подборка верной цветовой гами"
-                width="370"
-              />
+              <div class="galery-cotainer-foto">
+                <img
+                  src="./images/job/job-3.jpg"
+                  alt="подборка верной цветовой гами"
+                  width="370"
+                />
+                <p class="gallery-description">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -430,5 +441,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-button" type="button" data-modal-close>
+          <svg class="icon-close" width="11px" height="11px">
+            <use href="./images/SVG/icon.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
